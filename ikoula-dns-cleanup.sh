@@ -1,0 +1,1 @@
+python3 ikoula-dns-cleanup.py $CERTBOT_DOMAIN $CERTBOT_VALIDATION

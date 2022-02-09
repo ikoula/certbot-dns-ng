@@ -1,0 +1,1 @@
+python3 ikoula-dns-auth.py $CERTBOT_DOMAIN $CERTBOT_VALIDATION

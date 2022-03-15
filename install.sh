@@ -31,7 +31,8 @@ echo "
     --preferred-challenges=dns
     --manual-auth-hook ./ikoula-dns-auth.sh
     --manual-cleanup-hook ./ikoula-dns-cleanup.sh
-    -d $domain
+    --manual-public-ip-logging-ok
+    -d $domain -d \*.$domain
     "
 read -p "Est-ce que tout est correct ? [O/n] " answervar
 if [ ${answervar^^} = "O" ] || [ ${answervar^^} = "Y" ]
@@ -51,6 +52,7 @@ then
     --preferred-challenges=dns \
     --manual-auth-hook ./ikoula-dns-auth.sh \
     --manual-cleanup-hook ./ikoula-dns-cleanup.sh \
-    -d $domain
+    --manual-public-ip-logging-ok \
+    -d $domain -d \*.$domain
 fi
 exit 0
